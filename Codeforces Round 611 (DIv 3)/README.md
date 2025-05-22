@@ -1,67 +1,50 @@
-A. Division?
+A. Minutes Before the New Year
 time limit per test1 second
 memory limit per test256 megabytes
-Codeforces separates its users into 4
-divisions by their rating:
+New Year is coming and you are excited to know how many minutes remain before the New Year. You know that currently the clock shows ℎ
+hours and 𝑚
+minutes, where 0≤ℎℎ<24
+and 0≤𝑚𝑚<60
+. We use 24-hour time format!
 
-For Division 1: 1900≤rating
-For Division 2: 1600≤rating≤1899
-For Division 3: 1400≤rating≤1599
-For Division 4: rating≤1399
-Given a rating
-, print in which division the rating
-belongs.
+Your task is to find the number of minutes before the New Year. You know that New Year comes when the clock shows 0
+hours and 0
+minutes.
+
+You have to answer 𝑡
+independent test cases.
 
 Input
-The first line of the input contains an integer 𝑡
-(1≤𝑡≤104
-) — the number of testcases.
+The first line of the input contains one integer 𝑡
+(1≤𝑡≤1439
+) — the number of test cases.
 
-The description of each test consists of one line containing one integer rating
-(−5000≤rating≤5000
-).
+The following 𝑡
+lines describe test cases. The 𝑖
+-th line contains the time as two integers ℎ
+and 𝑚
+(0≤ℎ<24
+, 0≤𝑚<60
+). It is guaranteed that this time is not a midnight, i.e. the following two conditions can't be met at the same time: ℎ=0
+and 𝑚=0
+. It is guaranteed that both ℎ
+and 𝑚
+are given without leading zeros.
 
 Output
-For each test case, output a single line containing the correct division in the format "Division X", where 𝑋
-is an integer between 1
-and 4
-representing the division for the corresponding rating.
+For each test case, print the answer on it — the number of minutes before the New Year.
 
 Example
 InputCopy
-7
--789
-1299
-1300
-1399
-1400
-1679
-2300
+5
+23 55
+23 0
+0 1
+4 20
+23 59
 OutputCopy
-Division 4
-Division 4
-Division 4
-Division 4
-Division 3
-Division 2
-Division 1
-Note
-For test cases 1−4
-, the corresponding ratings are −789
-, 1299
-, 1300
-, 1399
-, so all of them are in division 4
-.
-
-For the fifth test case, the corresponding rating is 1400
-, so it is in division 3
-.
-
-For the sixth test case, the corresponding rating is 1679
-, so it is in division 2
-.
-
-For the seventh test case, the corresponding rating is 2300
-, so it is in division 1
-.
+5
+60
+1439
+1180
+1
