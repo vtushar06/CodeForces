@@ -1,59 +1,50 @@
-A. Marathon
-time limit per test1 second
+A. Spy Detected!
+time limit per test2 seconds
 memory limit per test256 megabytes
-You are given four distinct integers 𝑎
-, 𝑏
-, 𝑐
-, 𝑑
-.
+You are given an array 𝑎
+consisting of 𝑛
+(𝑛≥3
+) positive integers. It is known that in this array, all the numbers except one are the same (for example, in the array [4,11,4,4]
+all numbers except one are equal to 4
+).
 
-Timur and three other people are running a marathon. The value 𝑎
-is the distance that Timur has run and 𝑏
-, 𝑐
-, 𝑑
-correspond to the distances the other three participants ran.
-
-Output the number of participants in front of Timur.
+Print the index of the element that does not equal others. The numbers in the array are numbered from one.
 
 Input
 The first line contains a single integer 𝑡
-(1≤𝑡≤104
-) — the number of test cases.
+(1≤𝑡≤100
+). Then 𝑡
+test cases follow.
 
-The description of each test case consists of four distinct integers 𝑎
-, 𝑏
-, 𝑐
-, 𝑑
-(0≤𝑎,𝑏,𝑐,𝑑≤104
+The first line of each test case contains a single integer 𝑛
+(3≤𝑛≤100
+) — the length of the array 𝑎
+.
+
+The second line of each test case contains 𝑛
+integers 𝑎1,𝑎2,…,𝑎𝑛
+(1≤𝑎𝑖≤100
 ).
 
+It is guaranteed that all the numbers except one in the 𝑎
+array are the same.
+
 Output
-For each test case, output a single integer — the number of participants in front of Timur.
+For each test case, output a single integer — the index of the element that is not equal to others.
 
 Example
 InputCopy
 4
-2 3 4 1
-10000 0 1 2
-500 600 400 300
-0 9999 10000 9998
+4
+11 13 11 11
+5
+1 4 4 4 4
+10
+3 3 3 3 10 3 3 3 3 3
+3
+20 20 10
 OutputCopy
 2
-0
 1
+5
 3
-Note
-For the first test case, there are 2
-people in front of Timur, specifically the participants who ran distances of 3
-and 4
-. The other participant is not in front of Timur because he ran a shorter distance than Timur.
-
-For the second test case, no one is in front of Timur, since he ran a distance of 10000
-while all others ran a distance of 0
-, 1
-, and 2
-respectively.
-
-For the third test case, only the second person is in front of Timur, who ran a total distance of 600
-while Timur ran a distance of 500
-.
